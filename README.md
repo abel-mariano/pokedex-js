@@ -11,7 +11,7 @@ In this project made for study purposes, an application of the Pokédex was crea
 <details>
 
 <div align="center">
-<img src="" width="640px"/>
+<img src="https://github.com/abel-mariano/pokedex-js/assets/120792207/3a758f3e-2249-41fa-a507-f3e08ff77686" width="640px"/>
 </div>
 
 </details>
