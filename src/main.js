@@ -19,11 +19,20 @@ const renderPokemon = async (pokemon) => {
   pokemonNumber.innerHTML = '';
 
   const data = await fetchPokemon(pokemon);
+  const pokeId = 650;
 
   if (!data) {
     pokemonImage.style.display = 'none';
     pokemonName.innerHTML = 'Não encontrado';
     pokemonNumber.innerHTML = '';
+    input.value = '';
+  } else if (data.id >= pokeId) {
+    pokemonImage.style.display = 'block';
+    pokemonImage.src = data.sprites.front_default;
+    pokemonNumber.innerHTML = data.id;
+    pokemonName.innerHTML = data.name;
+    input.value = '';
+    searchPokemon = data.id;
   } else {
     pokemonImage.style.display = 'block';
     pokemonImage.src = data.sprites.versions['generation-v']['black-white']
@@ -53,3 +62,11 @@ btnNext.addEventListener('click', () => {
   searchPokemon += 1;
   renderPokemon(searchPokemon);
 });
+
+/* pokemonImage.style.display = 'block';
+  pokemonImage.src = data.sprites.versions['generation-v']['black-white']
+    .animated.front_default;
+  pokemonNumber.innerHTML = data.id;
+  pokemonName.innerHTML = data.name;
+  input.value = '';
+  searchPokemon = data.id; */
