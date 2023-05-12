@@ -62,11 +62,3 @@ btnNext.addEventListener('click', () => {
   searchPokemon += 1;
   renderPokemon(searchPokemon);
 });
-
-/* pokemonImage.style.display = 'block';
-  pokemonImage.src = data.sprites.versions['generation-v']['black-white']
-    .animated.front_default;
-  pokemonNumber.innerHTML = data.id;
-  pokemonName.innerHTML = data.name;
-  input.value = '';
-  searchPokemon = data.id; */
